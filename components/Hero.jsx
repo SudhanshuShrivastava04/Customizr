@@ -1,41 +1,30 @@
 import React from "react";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-        <div className="mx-auto max-w-xl text-center">
-          <h1 className="text-3xl font-extrabold sm:text-5xl">
-            Understand User Flow.
-            <strong className="font-extrabold text-red-700 sm:block">
-              {" "}
-              Increase Conversion.{" "}
-            </strong>
-          </h1>
+    <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
+      <div className="absolute  pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="text-center relative z-20 max-w-3xl p-3 md:p-0">
+        <h1 className="text-3xl font-extrabold sm:text-5xl">
+          Your prompt, Our form!
+          <strong className="font-extrabold text-black sm:block">
+            {" "}
+            That&apos;s Customizer.{" "}
+          </strong>
+        </h1>
 
-          <p className="mt-4 sm:text-xl/relaxed">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-            illo tenetur fuga ducimus numquam ea!
-          </p>
+        <p className="mt-4 sm:text-lg/relaxed text-gray-400">
+          Tired of manual form building? Customizr is your solution. Convert
+          your thoughts into forms effortlessly with our AI-driven technology.
+        </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-              href="#"
-            >
-              Get Started
-            </a>
-
-            <a
-              className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-              href="#"
-            >
-              Learn More
-            </a>
-          </div>
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <Button>Get Started</Button>
+          <Button variant="outline">Learn More</Button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Header = () => {
   return (
-    <div className="sticky top-0 md:p-3 p-2 border-b shadow-sm glassmorphism z-10">
+    <div className="fixed w-full top-0 md:p-3 p-2 border-b shadow-sm glassmorphism z-50 bg-transparent">
       <div className="flex items-center justify-between">
         <Image src={"/logo.svg"} width={50} height={50} alt="logo" />
         <Button className="flex gap-x-2">
