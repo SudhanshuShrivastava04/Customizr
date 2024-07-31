@@ -14,10 +14,10 @@ const Hero = () => {
           </strong>
         </h1>
 
-        <p className="mt-4 sm:text-lg/relaxed text-gray-400">
+        {/* <p className="mt-4 sm:text-lg/relaxed text-gray-400">
           Tired of manual form building? Customizr is your solution. Convert
           your thoughts into forms effortlessly with our AI-driven technology.
-        </p>
+        </p> */}
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button>Get Started</Button>
