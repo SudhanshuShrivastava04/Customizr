@@ -4,8 +4,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <Header />
-      <div className="mx-auto max-w-7xl min-h-screen">
+      <div className="mx-auto w-full text-center text-5xl min-h-screen">
         Dashboard
       </div>
     </>
