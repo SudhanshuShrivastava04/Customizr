@@ -2,14 +2,11 @@
 
 import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/Sidebar";
-import {
-  IconBrandTabler,
-  IconSettings,
-  IconUserBolt,
-} from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { SiGooglegemini } from "react-icons/si";
+import { Progress } from "@/components/ui/progress";
 import { SignedIn, UserButton, useUser } from "@clerk/nextjs";
 import { LibraryBig, LineChart, MessageSquare, Shield } from "lucide-react";
 
@@ -18,28 +15,28 @@ export default function DashboardLayout({ children }) {
   const links = [
     {
       label: "My Forms",
-      href: "#",
+      href: "/dashboard",
       icon: (
         <LibraryBig className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Responses",
-      href: "#",
+      href: "/dashboard/responses",
       icon: (
         <MessageSquare className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Analytics",
-      href: "#",
+      href: "/dashboard/analytics",
       icon: (
         <LineChart className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Upgrade",
-      href: "#",
+      href: "/dashboard/upgrade",
       icon: (
         <Shield className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -65,6 +62,15 @@ export default function DashboardLayout({ children }) {
               </div>
             </div>
             <div>
+              {open ? (
+                <>
+                  <div className="capitalize text-sm text-gray-400 mb-2 flex gap-x-1 items-center">
+                    2 out of 4 forms are used
+                    <SiGooglegemini size={18} />
+                  </div>
+                  <Progress value={50} className="h-2" />
+                </>
+              ) : null}
               <SidebarLink
                 link={{
                   label: <div>Hi, {user?.firstName}</div>,

@@ -11,7 +11,7 @@ const Hero = () => {
           Your prompt, Our form!
           <strong className="font-extrabold text-black sm:block">
             {" "}
-            That&apos;s Customizer.{" "}
+            That&apos;s Customizr.{" "}
           </strong>
         </h1>
 
